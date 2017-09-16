@@ -1,4 +1,5 @@
-import csv, string
+import csv
+import string
 # Read through available players from FanDuel player list file.
 
 def get_player_list():
@@ -11,7 +12,7 @@ def get_player_list():
             {
                 'NAME' : row[1].translate(None, string.punctuation) + " " + row[2].translate(None, string.punctuation),
                 'POS' : row[0], 'PRICE' : row[3], 'TEAM' : row[4], 'OPP' : row[5]
-             }
+            }
         )
     player_list.remove(player_list[0])
     return player_list
