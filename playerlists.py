@@ -4,7 +4,8 @@ import string
 
 def get_player_list():
     #csv file of player list
-    file = open('FanDuel-NBA-2017-03-30-18476-players-list.csv')
+    filename = input("Filename of player list (.csv): ")
+    file = open(filename)
     player_list = []
     reader = csv.reader(file)
     for row in reader:

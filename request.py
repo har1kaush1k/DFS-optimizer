@@ -1,6 +1,8 @@
 import base64
 import requests
 def send_request(player, team):
+    username = input("username: ")
+    password = input("password: ")
     try:
         response = requests.get(
             url = 'https://api.mysportsfeeds.com/v1.1/pull/nba/2016-2017-regular/player_gamelogs.json',
@@ -10,7 +12,7 @@ def send_request(player, team):
             },
             headers = {
                 # replace username and password with credentials
-                "Authorization": "Basic " + base64.b64encode('{}:{}'.format("username", "password"}.encode('utf-8')).decode('ascii')
+                "Authorization": "Basic " + base64.b64encode('{}:{}'.format(username, password}.encode('utf-8')).decode('ascii')
             }
         )
         #print('Response HTTP Status Code: {status_code}'.format(status_code=response.status_code))
