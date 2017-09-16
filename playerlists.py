@@ -4,7 +4,7 @@ import string
 
 def get_player_list():
     #csv file of player list
-    filename = input("Filename of player list (.csv): ")
+    filename = raw_input('Enter filename (.csv): ') + '.csv'
     file = open(filename)
     player_list = []
     reader = csv.reader(file)
