@@ -10,8 +10,8 @@ def get_player_list():
     for row in reader:
         player_list.append(
             {
-                'NAME' : row[1].translate(None, string.punctuation) + " " + row[2].translate(None, string.punctuation),
-                'POS' : row[0], 'PRICE' : row[3], 'TEAM' : row[4], 'OPP' : row[5]
+                'FIRST' : row[1], 'LAST' : row[2], 'POS' : row[0],
+                'PRICE' : row[3], 'TEAM' : row[4], 'OPP' : row[5]
             }
         )
     player_list.remove(player_list[0])
