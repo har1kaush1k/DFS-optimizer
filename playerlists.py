@@ -11,8 +11,8 @@ def get_player_list():
     for row in reader:
         player_list.append(
             {
-                'FIRST' : row[1], 'LAST' : row[2], 'POS' : row[0],
-                'PRICE' : row[3], 'TEAM' : row[4], 'OPP' : row[5]
+                'FIRST' : row[2], 'LAST' : row[4], 'POS' : row[1],
+                'PRICE' : row[6], 'TEAM' : row[9], 'OPP' : row[10]
             }
         )
     player_list.remove(player_list[0])

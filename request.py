@@ -14,7 +14,7 @@ def send_request(username, password, date, player, team):
                 "Authorization": "Basic " + base64.b64encode('{}:{}'.format(username, password).encode('utf-8')).decode('ascii')
             }
         )
-        #print('Response HTTP Status Code: {status_code}'.format(status_code=response.status_code))
+        print('Response HTTP Status Code: {status_code}'.format(status_code=response.status_code))
         #print('Response HTTP Response Body: {content}'.format(content=response.content))
         return response
     except requests.exceptions.RequestException:
