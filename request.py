@@ -1,5 +1,6 @@
 import base64
 import requests
+
 def send_request(username, password, date, player, team):
     try:
         response = requests.get(
@@ -16,7 +17,7 @@ def send_request(username, password, date, player, team):
         )
         print('Response HTTP Status Code: {status_code}'.format(status_code=response.status_code))
         #print('Response HTTP Response Body: {content}'.format(content=response.content))
-        return response
+        return response.content
     except requests.exceptions.RequestException:
         print('HTTP Request failed')
 
